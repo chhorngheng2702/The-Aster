@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Fleet | The Atelier</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { serif: ['Cormorant Garamond', 'serif'], sans: ['Inter', 'sans-serif'] },
+                    colors: { gold: '#c5a059', brandBlack: '#111111' }
+                }
+            }
+        }
+    </script>
+    <style type="text/css">
+        #menu-toggle:checked ~ #mobile-menu { display: flex; }
+    </style>
+</head>
+<body class="font-sans bg-white text-brandBlack antialiased">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-6 border-b border-gray-200 bg-white md:px-12 lg:px-20">
+        <a href="Home.html" class="font-serif text-2xl tracking-widest uppercase">The Aster</a>
+        <div class="hidden md:flex space-x-8 text-xs font-semibold tracking-wider uppercase">
+            <a href="collection.html" class="text-gold font-bold">The Fleet</a>
+            <a href="vision.html" class="hover:text-gold transition-colors">The Vision</a>
+            <a href="contact.html" class="hover:text-gold transition-colors">Contact</a>
+        </div>
+        <label for="menu-toggle" class="md:hidden flex flex-col justify-between w-6 h-4 cursor-pointer z-50 relative">
+            <span class="w-full h-0.5 bg-brandBlack block rounded"></span>
+            <span class="w-full h-0.5 bg-brandBlack block rounded"></span>
+            <span class="w-full h-0.5 bg-brandBlack block rounded"></span>
+        </label>
+        <input type="checkbox" id="menu-toggle" class="hidden" />
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white border-b border-gray-200 flex-col px-6 py-8 space-y-4 text-xs font-semibold tracking-wider uppercase shadow-lg md:hidden">
+            <a href="collection.html" class="py-2 text-gold border-b border-gray-50">The Fleet</a>
+            <a href="vision.html" class="py-2 hover:text-gold border-b border-gray-50">The Vision</a>
+            <a href="contact.html" class="py-2 hover:text-gold">Contact</a>
+        </div>
+    </nav>
+
+    <header class="text-center py-12 sm:py-16 bg-gray-50 border-b border-gray-100 px-6">
+        <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl mb-3">The Limited Automotive Fleet</h1>
+        <p class="text-[10px] sm:text-xs tracking-widest text-gold uppercase font-semibold">Where Precision Meet Performance</p>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-12 sm:py-16 md:px-12 lg:px-20">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 sm:gap-y-16">
+            
+            <!-- Car 1 -->
+            <div class="group text-center">
+                <div class="relative bg-gray-50 aspect-[4/5] mb-5 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=600" alt="Porsche Luxury Performance" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <h2 class="italic text-lg sm:text-xl mb-1">Porsche 911 Turbo S</h2>
+                <p class="text-sm text-gray-500 mb-4">From $225,000+</p>
+                <button class="w-full sm:w-auto border border-brandBlack px-6 py-3 text-[11px] tracking-widest uppercase hover:bg-brandBlack hover:text-white transition-all duration-300"> Build</button>
+            </div>
+
+            <!-- Car 2 -->
+            <div class="group text-center">
+                <div class="relative bg-gray-50 aspect-[4/5] mb-5 overflow-hidden">
+                    <img src="https://www.sportscarmarket.com/wp-content/uploads/2016/09/2014-mclaren-p1-coupe-drivers-front.jpg" alt="Track Prototype Car" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <h2 class="italic text-lg sm:text-xl mb-1">McLaren P1</h2>
+                <p class="text-sm text-gray-500 mb-4">$1,400,000</p>
+                <button class="w-full sm:w-auto border border-brandBlack px-6 py-3 text-[11px] tracking-widest uppercase hover:bg-brandBlack hover:text-white transition-all duration-300">Sold</button>
+            </div>
+
+            <!-- Car 3 -->
+            <div class="group text-center">
+                <div class="relative bg-gray-50 aspect-[4/5] mb-5 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&q=80&w=600" alt="Vintage Modern Hypercar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <h2 class="italic text-lg sm:text-xl mb-1">Porsche 911 GT3</h2>
+                <p class="text-sm text-gray-500 mb-4">From $385,000+</p>
+                <button class="w-full sm:w-auto border border-brandBlack px-6 py-3 text-[11px] tracking-widest uppercase hover:bg-brandBlack hover:text-white transition-all duration-300">Build</button>
+            </div>
+
+            <!-- Car 4 -->
+            <div class="group text-center">
+                <div class="relative bg-gray-50 aspect-[4/5] mb-5 overflow-hidden">
+                    <img src="https://www.topgear.com/sites/default/files/images/news-article/2020/04/bc75b00c26366ce1c72ca4f6e8d904bc/sopro_17.jpg" alt="Track Prototype Car" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <h2 class="italic text-lg sm:text-xl mb-1">Bugatti Divo</h2>
+                <p class="text-sm text-gray-500 mb-4">$5,000,000</p>
+                <button class="w-full sm:w-auto border border-brandBlack px-6 py-3 text-[11px] tracking-widest uppercase hover:bg-brandBlack hover:text-white transition-all duration-300">Sold</button>
+            </div>
+
+            <!-- Car 5 -->
+            <div class="group text-center">
+                <div class="relative bg-gray-50 aspect-[4/5] mb-5 overflow-hidden">
+                    <img src="https://cdn.ferrari.com/cms/network/media/img/resize/64998eb09148ac002333bfd1-ferrari-sf90-xx-spider-intro-social-card?width=1080" alt="Track Prototype Car" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <h2 class="italic text-lg sm:text-xl mb-1">Ferrari SF90 XX SPIDER</h2>
+                <p class="text-sm text-gray-500 mb-4">From $650,000+</p>
+                <button class="w-full sm:w-auto border border-brandBlack px-6 py-3 text-[11px] tracking-widest uppercase hover:bg-brandBlack hover:text-white transition-all duration-300">Build</button>
+            </div>
+
+            <!-- Car 6 -->
+            <div class="group text-center">
+                <div class="relative bg-gray-50 aspect-[4/5] mb-5 overflow-hidden">
+                    <img src="https://www.topgear.com/sites/default/files/cars-car/image/2020/09/_atf5691.jpeg?w=1280&h=720" alt="Vintage Modern Hypercar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <h2 class="italic text-lg sm:text-xl mb-1">Mercedes-Benz AMG GT Black Series</h2>
+                <p class="text-sm text-gray-500 mb-4">From $400,000+</p>
+                <button class="w-full sm:w-auto border border-brandBlack px-6 py-3 text-[11px] tracking-widest uppercase hover:bg-brandBlack hover:text-white transition-all duration-300">Build</button>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
